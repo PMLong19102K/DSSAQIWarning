@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <linearGradient id="cloud-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#1E40AF" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <g transform="translate(0, 5)">
+    <path d="M25 65C16.7 65 10 58.3 10 50C10 41.7 16.7 35 25 35C26.5 35 27.9 35.2 29.2 35.6C30.9 26.6 38.8 20 48 20C59 20 68 29 68 40C68 40.8 67.9 41.6 67.8 42.4C74.6 44.1 79.5 50.3 79.5 57.5C79.5 65.5 73 72 65 72H25" fill="url(#cloud-gradient)" opacity="0.9" />
+
+    <circle cx="25" cy="55" r="3" fill="white" opacity="0.6" />
+    <circle cx="35" cy="45" r="3" fill="white" opacity="0.6" />
+    <circle cx="45" cy="60" r="3" fill="white" opacity="0.6" />
+    <circle cx="55" cy="35" r="3" fill="white" opacity="0.6" />
+    <circle cx="65" cy="50" r="3" fill="white" opacity="0.6" />
+
+    <path d="M20 60L75 30" stroke="#FBBF24" stroke-width="4" stroke-linecap="round" filter="url(#glow)" />
+    
+    <path d="M68 30H75V37" stroke="#FBBF24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <g transform="translate(90, 48)">
+    <text font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="32" fill="#FFFFFF" letter-spacing="1">
+      REGRESSION<tspan fill="#38BDF8">CAST</tspan>
+    </text>
+    <text x="2" y="20" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="10" fill="#94A3B8" letter-spacing="3" text-transform="uppercase">
+      AI Weather Intelligence
+    </text>
+  </g>
+</svg>
