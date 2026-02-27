@@ -1,5 +1,4 @@
 // src/components/WeatherAQICard.js
-// Component đã được tối ưu UI/UX và hiển thị CẢNH BÁO HIỆN TẠI
 
 import React, { useEffect, useState } from "react";
 // Giả định các import này đã đúng đường dẫn trong project của bạn
@@ -29,7 +28,6 @@ const WeatherAQICard = () => {
     tf.ready().then(loadModel);
   }, []);
 
-  // Logic fetch data và dự đoán (Đã sửa để lấy lời khuyên hiện tại)
   useEffect(() => {
     if (!model) return;
 
@@ -38,7 +36,6 @@ const WeatherAQICard = () => {
       const results = {};
 
       for (const city of CITIES) {
-        // ... (Phần gọi API và xử lý lỗi giữ nguyên) ...
 
         const weatherData = await getWeather(city.name);
         const description = weatherData?.weather?.[0]?.description;
@@ -64,8 +61,6 @@ const WeatherAQICard = () => {
           pm2_5: aqiData.components.pm2_5,
         };
         const predictedAqiLevel = predictAQI(model, pollutants);
-
-        // --- ĐIỂM SỬA CHỮA QUAN TRỌNG: Lấy lời khuyên cho CẢ HIỆN TẠI VÀ DỰ BÁO ---
         const predictedAdvice = getAQIDescription(predictedAqiLevel);
         const currentAdvice = getAQIDescription(aqiData.main.aqi);
 
